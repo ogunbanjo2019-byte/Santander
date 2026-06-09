@@ -1,0 +1,261 @@
+:root {
+    --santander-red: #ec0000;
+    --santander-dark-red: #cc0000;
+    --bg-light: #f4f4f4;
+    --text-dark: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Login Styles */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+}
+
+.login-container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-width: 180px;
+}
+
+.login-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--santander-red);
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--santander-red);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--santander-red);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: var(--santander-dark-red);
+}
+
+.login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: var(--santander-red);
+    text-decoration: none;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+    background-color: var(--santander-red);
+    color: var(--white);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-icons i {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, var(--santander-red), var(--santander-dark-red));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(236, 0, 0, 0.3);
+}
+
+.balance-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.action-item i {
+    background: #fdf2f2;
+    color: var(--santander-red);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: bold;
+}
+
+.transaction-list {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.trans-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trans-name {
+    font-weight: 600;
+}
+
+.trans-date {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.trans-amount {
+    font-weight: bold;
+}
+
+.trans-amount.pending {
+    color: #f39c12;
+}
+
+.trans-amount.positive {
+    color: #27ae60;
+}
+
+.trans-amount.negative {
+    color: #c0392b;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .balance-amount {
+        font-size: 1.8rem;
+    }
+    .action-item span {
+        font-size: 0.7rem;
+    }
+}
